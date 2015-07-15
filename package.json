@@ -1,7 +1,11 @@
 {
   "name": "angularfireslack",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "firebase": "^2.2.7",
+    "grunt": "^0.4.5",
+    "plangular-3": "^3.1.0"
+  },
   "repository": {},
   "devDependencies": {
     "grunt": "^0.4.5",

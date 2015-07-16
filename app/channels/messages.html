@@ -3,7 +3,7 @@
   <h1>{{ messagesCtrl.channelName }}</h1>
 </div>
 
-
+<div class="theMessages">
 <div class="message-wrap" ng-repeat="message in messagesCtrl.messages">
 <div class="panel panel-primary">
 <!-- message pic -->
@@ -20,8 +20,15 @@
     </div></div>
   </div>
 </div>
+</div>
 
-<footer>
+
+<div class="res">
+  <pre>
+    {{messagesCtrl.songRes | json}}
+  </pre>
+</div>
+<div class="myForms">
 <form class="message-form" ng-submit="messagesCtrl.sendMessage()">
 
   <div class="input-group">
@@ -34,4 +41,12 @@
     </span>
   </div>
 </form>
-</footer>
+
+
+
+<form ng-submit="messagesCtrl.spotSearch()">
+<input type="text" class="form-control" ng-model="messagesCtrl.spotSearchText" placeholder="Look up a Song on Spotify" />
+<input type="submit" class="btn btn-success" />
+</form>
+</div>
+

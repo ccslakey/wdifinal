@@ -24,7 +24,7 @@ body {
 
 .sidebar {
   display:inline-block;
-  width:27%;
+  width:150px;
   vertical-align: top;
   height:100%;
   background:#4d394b;
@@ -91,12 +91,16 @@ body {
   text-transform: uppercase;
 }
 
+.sidebar .channel-list {
+  margin-bottom: 80px;
+}
+
 .sidebar .my-info {
-  position:relative;
+  position:fixed;
   bottom:0;
   padding:15px;
   background:#3E313C;
-  width:19.5%;
+  width:150px;
 }
 
 .sidebar .my-info .user-pic {
@@ -170,8 +174,7 @@ body {
 }
 
 .message-pane .message-form {
-  position:fixed;
-  bottom:0;
+  
   padding:0 15px 15px 0;
   background:#fff;
   width:79%;
@@ -180,6 +183,7 @@ body {
 .message-pane .message-wrap {
   position:relative;
   margin-top:15px;
+  padding: 10px;
 }
 
 .message-pane .message-wrap .user-pic {
@@ -211,6 +215,12 @@ body {
   margin: 100px auto;
 }
 
+.myForms{
+  position: fixed;
+  bottom: 13px;
+  right: auto;
+  width: 55.5%;
+}
 
 
 

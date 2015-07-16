@@ -1,4 +1,6 @@
-app.controller('MessagesCtrl', function(profile, channelName, messages, Spotify){
+app.controller('MessagesCtrl', ['profile', 'channelName', 'messages', 'Spotify', '$scope', 'modalService',
+    function(profile, channelName, messages, Spotify, $scope, modalService){
+    
     var messagesCtrl = this;
 
     messagesCtrl.messages = messages;
@@ -16,10 +18,21 @@ app.controller('MessagesCtrl', function(profile, channelName, messages, Spotify)
     			messagesCtrl.message = '';
     		});
     	}
-
+        Spotify.search('Nirvana', 'artist').then(function (data) {
+          console.log(data);
+        });
     };
+
+    messagesCtrl.spotSearch = function () {
+            
+            Spotify.search(messagesCtrl.spotSearchText, 'artist', 0)
+                .then(function(data){
+                    console.log(data);
+                    messagesCtrl.songRes = data;
+                });
     
+    }
 
 
 
-});
+}]);

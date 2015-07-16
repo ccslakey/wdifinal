@@ -8,6 +8,7 @@
  *
  * Main module of the application.
  */
+ 
 var app = angular
   .module('angularfireSlackApp', [
     'firebase',
@@ -23,7 +24,7 @@ var app = angular
     SpotifyProvider.setRedirectUri('http://localhost:4000/callback');
     SpotifyProvider.setScope('playlist-read-private playlist-read-collaborative playlist-modify-public playlist-modify-collaborative user-library-read');
     // If you already have an auth token
-    // SpotifyProvider.setAuthToken(SPOTIFY_AUTH_TOKEN);
+     SpotifyProvider.setAuthToken(SPOTIFY_AUTH_TOKEN);
 
     $stateProvider
       .state('home', {

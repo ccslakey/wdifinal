@@ -19,11 +19,11 @@ var app = angular
     'ui.bootstrap'
   ])
   .config(function (SpotifyProvider, $stateProvider, $urlRouterProvider, authProvider) {
-    SpotifyProvider.setClientId(SPOTIFY_CLIENT_ID);
-    SpotifyProvider.setRedirectUri(SPOTIFY_CALLBACK_URI);
-    SpotifyProvider.setScope(SPOTIFY_SCOPE);
+    SpotifyProvider.setClientId('9a9c2728a52d4e6c9ceb4effe7e78afd');
+    SpotifyProvider.setRedirectUri('http://localhost:4000/callback');
+    SpotifyProvider.setScope('playlist-read-private playlist-read-collaborative playlist-modify-public playlist-modify-collaborative user-library-read');
     // If you already have an auth token
-    SpotifyProvider.setAuthToken(SPOTIFY_AUTH_TOKEN);
+    // SpotifyProvider.setAuthToken(SPOTIFY_AUTH_TOKEN);
 
     $stateProvider
       .state('home', {
@@ -151,8 +151,5 @@ var app = angular
     $urlRouterProvider.otherwise('/');
   })
   .constant('FirebaseUrl', 'https://angchatter.firebaseio.com/');
-
-
-
 
 

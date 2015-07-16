@@ -1,7 +1,6 @@
 app.controller('MessagesCtrl', function(profile, channelName, messages, Spotify){
     var messagesCtrl = this;
 
-
     messagesCtrl.messages = messages;
     messagesCtrl.channelName = channelName;
 
@@ -19,6 +18,7 @@ app.controller('MessagesCtrl', function(profile, channelName, messages, Spotify)
     	}
 
     };
+    
 
 
 

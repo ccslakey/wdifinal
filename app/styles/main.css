@@ -24,13 +24,14 @@ body {
 
 .sidebar {
   display:inline-block;
-  width:19.5%;
+  width:27%;
   vertical-align: top;
   height:100%;
   background:#4d394b;
-  position:relative;
+  position:fixed;
   overflow-y:scroll;
   padding-bottom:100px;
+  left:0;
 }
 
 .sidebar .slack-name {
@@ -49,7 +50,7 @@ body {
 .sidebar .room-list {
   margin-top:20px;
   background:#4d394b;
-  position:relative;
+ 
 }
 
 .sidebar .room-list .room a{
@@ -91,7 +92,7 @@ body {
 }
 
 .sidebar .my-info {
-  position:fixed;
+  position:relative;
   bottom:0;
   padding:15px;
   background:#3E313C;
@@ -148,7 +149,7 @@ body {
   height:100%;
   width:80%;
   overflow-y:scroll;
-  padding:55px 15px 65px 15px;
+  padding:4px;
 }
 
 .message-pane .header {

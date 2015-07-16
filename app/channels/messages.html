@@ -2,9 +2,10 @@
 <div class="header">
   <h1>{{ messagesCtrl.channelName }}</h1>
 </div>
+
+
 <div class="message-wrap" ng-repeat="message in messagesCtrl.messages">
-
-
+<div class="panel panel-primary">
 <!-- message pic -->
   <img class="user-pic" ng-src="{{ channelsCtrl.getGravatar(message.uid) }}" />
   <div class="message-info">
@@ -16,18 +17,21 @@
     <!-- the message text itself -->
     <div class="message">
      {{ message.body }}
-    </div>
+    </div></div>
   </div>
 </div>
 
+<footer>
 <form class="message-form" ng-submit="messagesCtrl.sendMessage()">
 
   <div class="input-group">
+  <span class="input-group-addon">
+    <i class="fa fa-spotify fa-lg"/>
+  </span>
     <input type="text" class="form-control" ng-model="messagesCtrl.message" placeholder="Type a message...">
     <span class="input-group-btn">
       <button class="btn btn-default" type="submit">Send</button>
     </span>
   </div>
-
 </form>
-
+</footer>

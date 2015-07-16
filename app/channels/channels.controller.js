@@ -1,4 +1,4 @@
-app.controller('ChannelsCtrl', function($state, Auth, Users, profile, channels){
+app.controller('ChannelsCtrl', function($state, Auth, Users, profile, Spotify, channels){
     var channelsCtrl = this;
 
     channelsCtrl.profile = profile;

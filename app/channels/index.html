@@ -1,6 +1,6 @@
-<div class="container">
+<div class="container-fluid">
     <div class="row">
-        <div class="col-sm-4" id="left">
+        <div class="col-xs-3">
             <div class="sidebar">
                 <div class="slack-name">
                     <h2>FireSlack</h2>
@@ -12,7 +12,7 @@
                         <a ui-sref="channels.messages({channelId: channel.$id})" ui-sref-active="selected"># {{ channel.name }}</a>
                     </div>
                     <!-- create new channel -->
-                    <div class="btn btn-primary">
+                    <div class="btn btn-info">
                         <a ui-sref="channels.create">+ create channel</a>
                     </div>
                     <hr>
@@ -41,14 +41,10 @@
                 </div>
             </div>
         </div>
-      <div class="col-sm-8" id="right">
-      <!-- body for messages! -->
-      <ui-view></ui-view>
-      
-
+        <div class="col-xs-7 col-xs-offset-1">
+        <!-- body for messages! -->
+        <ui-view></ui-view>
+        </div>
     </div>
 </div>
 
-<!-- <div class="col-sm-8" id="right"> -->
-
-<!-- </div> -->

@@ -24,13 +24,59 @@ app.controller('MessagesCtrl', ['profile', 'channelName', 'messages', 'Spotify',
     };
 
     messagesCtrl.spotSearch = function () {
-            
-            Spotify.search(messagesCtrl.spotSearchText, 'artist', 0)
+                // save this stuff- it gives you the basic json blob and resets search text
+            Spotify.search(messagesCtrl.spotSearchText, messagesCtrl.spotSearchType, 0)
                 .then(function(data){
+                    // cake
                     console.log(data);
                     messagesCtrl.songRes = data;
+                    messagesCtrl.spotSearchText = '';
+                    messagesCtrl.spotSearchType = '';
                 });
-    
+    // handle with functions
+     // Spotify.search(messagesCtrl.spotSearchText, messagesCtrl.spotSearchType, 0)
+     //            .then(handleData(data){
+                    
+     //            });
+
+    }
+
+
+     messagesCtrl.handleData = function (searchObject){
+        if(searchObject.artists){messagesCtrl.handleArtist(searchObject)}
+        if(searchObject.tracks){messagesCtrl.handleTrack(searchObject)}
+        if(searchObject.playlists){messagesCtrl.handlePlaylist(searchObject)}
+        if(searchObject.albums){messagesCtrl.handleAlbum(searchObject)}
+        }
+
+    messagesCtrl.handleArtist = function (){
+        console.log(data.artists);
+        messagesCtrl.songRes = data;
+        messagesCtrl.spotSearchText = '';
+        messagesCtrl.spotSearchType = '';
+    }
+
+
+
+    messagesCtrl.handleTrack = function (){
+        console.log(data.tracks);
+        messagesCtrl.songRes = data;
+        messagesCtrl.spotSearchText = '';
+        messagesCtrl.spotSearchType = ''; 
+    }
+
+
+    messagesCtrl.handleAlbum = function (){
+        console.log(data.albums);
+        messagesCtrl.songRes = data;
+        messagesCtrl.spotSearchText = '';
+        messagesCtrl.spotSearchType = '';
+    }
+    messagesCtrl.handlePlaylist = function (){
+        console.log(data.playlists);
+        messagesCtrl.songRes = data;
+        messagesCtrl.spotSearchText = '';
+        messagesCtrl.spotSearchType = '';
     }
 
 

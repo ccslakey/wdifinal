@@ -3,6 +3,33 @@
   <h1>{{ messagesCtrl.channelName }}</h1>
 </div>
 
+
+<div class="myForms">
+<form class="message-form" ng-submit="messagesCtrl.sendMessage()">
+
+  <div class="input-group">
+  <span class="input-group-addon">
+    <i class="fa fa-spotify fa-lg"/>
+  </span>
+    <input type="text" class="form-control" ng-model="messagesCtrl.message" placeholder="Type a message...">
+    <span class="input-group-btn">
+      <button class="btn btn-default" type="submit">Send</button>
+    </span>
+  </div>
+</form>
+
+
+
+<form ng-submit="messagesCtrl.spotSearch()">
+<input type="text" class="form-control" ng-model="messagesCtrl.spotSearchText" placeholder="Look up something on Spotify" />
+<input type="text" class="form-control" ng-model="messagesCtrl.spotSearchType" placeholder="Artist, Track, Ablum, or Playlist" />
+<input type="submit" class="btn btn-success" />
+</form>
+</div>
+
+
+
+
 <div class="theMessages">
 <div class="message-wrap" ng-repeat="message in messagesCtrl.messages">
 <div class="panel panel-primary">
@@ -28,25 +55,5 @@
     {{messagesCtrl.songRes | json}}
   </pre>
 </div>
-<div class="myForms">
-<form class="message-form" ng-submit="messagesCtrl.sendMessage()">
 
-  <div class="input-group">
-  <span class="input-group-addon">
-    <i class="fa fa-spotify fa-lg"/>
-  </span>
-    <input type="text" class="form-control" ng-model="messagesCtrl.message" placeholder="Type a message...">
-    <span class="input-group-btn">
-      <button class="btn btn-default" type="submit">Send</button>
-    </span>
-  </div>
-</form>
-
-
-
-<form ng-submit="messagesCtrl.spotSearch()">
-<input type="text" class="form-control" ng-model="messagesCtrl.spotSearchText" placeholder="Look up a Song on Spotify" />
-<input type="submit" class="btn btn-success" />
-</form>
-</div>
 

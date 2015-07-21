@@ -1,4 +1,5 @@
-app.controller('ProfileCtrl', function($state, md5, auth, profile){
+app.controller('ProfileCtrl', ['$state', 'md5', 'auth', 'profile',
+  function($state, md5, auth, profile){
     var profileCtrl = this;
   
     profileCtrl.profile = profile;
@@ -16,4 +17,4 @@ app.controller('ProfileCtrl', function($state, md5, auth, profile){
     };
 
 
-});
+}]);

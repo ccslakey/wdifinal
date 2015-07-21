@@ -1,4 +1,5 @@
-app.controller('AuthCtrl', function(Auth, $state){
+app.controller('AuthCtrl', [ 'Auth', '$state',
+  function(Auth, $state){
     var authCtrl = this;
 
     authCtrl.user = {
@@ -27,4 +28,4 @@ app.controller('AuthCtrl', function(Auth, $state){
 
 
 
-  });
+  }]);

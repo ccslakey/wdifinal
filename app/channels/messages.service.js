@@ -1,4 +1,5 @@
-app.factory('Messages', function ($firebaseArray, FirebaseUrl) {
+app.factory('Messages', ['$firebaseArray', 'FirebaseUrl',
+	function ($firebaseArray, FirebaseUrl) {
 	var channelMessagesRef = new Firebase(FirebaseUrl+'channelMessages');
 	var userMessagesRef = new Firebase(FirebaseUrl+'userMessages');
 
@@ -14,4 +15,4 @@ app.factory('Messages', function ($firebaseArray, FirebaseUrl) {
 	    };
 	
 
-});
+}]);

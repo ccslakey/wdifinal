@@ -1,8 +1,9 @@
-app.factory('Users', function($firebaseArray, $firebaseObject, FirebaseUrl){
+app.factory('Users', ['$firebaseArray', '$firebaseObject', 'FirebaseUrl',
+  function($firebaseArray, $firebaseObject, FirebaseUrl){
 	var usersRef = new Firebase(FirebaseUrl+'users');
-    var users = $firebaseArray(usersRef);
-    var usersRef = new Firebase(FirebaseUrl+'users');
-    var connectedRef = new Firebase(FirebaseUrl+'.info/connected');
+  var users = $firebaseArray(usersRef);
+  var usersRef = new Firebase(FirebaseUrl+'users');
+  var connectedRef = new Firebase(FirebaseUrl+'.info/connected');
 
 
     var Users = {
@@ -33,4 +34,4 @@ app.factory('Users', function($firebaseArray, $firebaseObject, FirebaseUrl){
 
 
     return Users;
-  });
+  }]);

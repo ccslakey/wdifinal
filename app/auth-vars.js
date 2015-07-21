@@ -1,6 +1,5 @@
-var FirebaseTokenGenerator = require("firebase-token-generator");
 var tokenGenerator = new FirebaseTokenGenerator("1BD0iLrcpDDiyOu6l3xqZvOFuRvcbKmWibEGjUwC");
-var token = tokenGenerator.createToken({ "uid": 1});
+var token = tokenGenerator.createToken({ "uid": "1"});
 
 
 // spotify secrets

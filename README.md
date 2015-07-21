@@ -41,7 +41,7 @@ Currently, we can only get json data from spotify's api
 * Auth0/OAuth authentication but it's temporarily being a dummy
 * Spotify API
 * Angular Spotify Wrapper(https://github.com/eddiemoore/angular-spotify)
-
+* Ui-Router(Angular)
 
 ## Unsolved/I didn't get to it
 * Rendering out spotify media

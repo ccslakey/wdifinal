@@ -8,8 +8,9 @@ version 0.11.1.
 
 ## Build & development
 * Clone the repo
-* Bower install
-* Update Firebase Url constant to accept your own firebase endpoint
+* bower install
+* npm install
+* Update Firebase Url constant to accept your own firebase endpoint(optional)
 * Run `grunt` for building and `grunt serve` for preview.
 
 
